@@ -4280,7 +4280,13 @@ static struct notifier_block notifier_pwr_stats_ready = {
 
 int __weak register_cpu_pwr_stats_ready_notifier(struct notifier_block *nb)
 {
-	return -EINVAL;
+	if (p->flags & PF_KTHREAD) {
+		if (unlikely(!cpu_online(dest_cpu)))
+			return rq;
+	} else {
+		if (unlikely(!cpu_active(dest_cpu)))
+			return rq;
+	}
 }
 
 static int register_sched_callback(void)
