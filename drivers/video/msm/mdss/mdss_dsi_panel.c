@@ -26,7 +26,6 @@
 #include <linux/display_state.h>
 
 #include "mdss_dsi.h"
-#ifdef TARGET_HW_MDSS_HDMI
 #include "mdss_dba_utils.h"
 
 #ifdef CONFIG_POWERSUSPEND
