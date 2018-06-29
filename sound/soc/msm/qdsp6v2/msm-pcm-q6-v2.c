@@ -420,8 +420,9 @@ static int msm_pcm_capture_prepare(struct snd_pcm_substream *substream)
 		pr_debug("%s Opening %d-ch PCM read stream, perf_mode %d\n",
 				__func__, params_channels(params),
 				prtd->audio_client->perf_mode);
-		ret = q6asm_open_read_v4(prtd->audio_client, FORMAT_LINEAR_PCM,
-				bits_per_sample, false);
+
+		ret = q6asm_open_read_v3(prtd->audio_client, FORMAT_LINEAR_PCM,
+				bits_per_sample);
 		if (ret < 0) {
 			pr_err("%s: q6asm_open_read failed\n", __func__);
 			q6asm_audio_client_free(prtd->audio_client);
