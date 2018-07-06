@@ -181,9 +181,6 @@ SYSCALL_DEFINE1(syncfs, int, fd)
 	struct super_block *sb;
 	int ret;
 
-	if (!fsync_enabled)
-		return 0;
-
 	if (!f.file)
 		return -EBADF;
 	sb = f.file->f_dentry->d_sb;
@@ -237,8 +234,6 @@ EXPORT_SYMBOL(vfs_fsync_range);
  */
 int vfs_fsync(struct file *file, int datasync)
 {
-	if (!fsync_enabled)
-		return 0;
 		
 	return vfs_fsync_range(file, 0, LLONG_MAX, datasync);
 }
@@ -248,9 +243,6 @@ static int do_fsync(unsigned int fd, int datasync)
 {
 	struct fd f = fdget(fd);
 	int ret = -EBADF;
-	
-	if (!fsync_enabled)
-		return 0;
 
 	if (f.file) {
 		ret = vfs_fsync(f.file, datasync);
