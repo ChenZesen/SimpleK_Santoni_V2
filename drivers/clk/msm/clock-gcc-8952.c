@@ -146,7 +146,7 @@ static DEFINE_VDD_REGULATORS(vdd_hf_pll, VDD_HF_PLL_NUM, 2,
 
 static struct pll_freq_tbl apcs_cci_pll_freq[] = {
 	F_APCS_PLL(307200000, 16, 0x0, 0x1, 0x0, 0x0, 0x0), //Stock minimum CCI speed to be correct with lower powerlevels
-	F_APCS_PLL(691200000, 36, 0x1, 0x4, 0x0, 0x0, 0x0), //CCI Clock incrased in 13%
+	F_APCS_PLL(710400000, 37, 0x1, 0x4, 0x0, 0x0, 0x0), //CCI Clock incrased in 15%
 };
 
 static struct pll_clk a53ss_cci_pll = {
@@ -607,7 +607,6 @@ static struct clk_freq_tbl ftbl_gcc_venus0_vcodec0_clk_8937[] = {
 	F( 308570000,          gpll6,  3.5,    0,     0),
 	F( 320000000,          gpll0,  2.5,    0,     0),
 	F( 360000000,          gpll6,    3,    0,     0),
-	F( 360000000,          gpll6,    3,    0,     0),
 	F( 400000000,          gpll6,    3,    0,     0), //Venus overclocking
 	F_END
 };
@@ -667,6 +666,7 @@ static struct clk_freq_tbl ftbl_gcc_camss_vfe0_1_clk_8937[] = {
 	F( 360000000,          gpll6,    3,    0,     0),
 	F( 400000000,          gpll0,    2,    0,     0),
 	F( 432000000,          gpll6,  2.5,    0,     0),
+	F( 453600000,          gpll6,  2.5,    0,     0), //VFE overclock in 5%
 	F_END
 };
 
@@ -1299,6 +1299,7 @@ static struct clk_freq_tbl ftbl_gcc_camss_jpeg0_clk_8937[] = {
 	F( 266666667,          gpll0,    3,    0,     0),
 	F( 308570000,          gpll6,  3.5,    0,     0),
 	F( 320000000,          gpll0,  2.5,    0,     0),
+	F( 360000000,          gpll6,    3,    0,     0), //Add more clock to jpeg0
 	F_END
 };
 
@@ -1612,6 +1613,7 @@ static struct clk_freq_tbl ftbl_gcc_mdss_mdp_clk[] = {
 	F( 200000000,	gpll0,	4,	0,	0),
 	F( 266670000,	gpll0,	3,	0,	0),
 	F( 320000000,	gpll0,	2.5,	0,	0),
+	F( 400000000,	gpll0,	2,	0,	0),
 	F_END
 };
 
@@ -1625,7 +1627,7 @@ static struct rcg_clk mdp_clk_src = {
 		.dbg_name = "mdp_clk_src",
 		.ops = &clk_ops_rcg,
 		VDD_DIG_FMAX_MAP3(LOWER, 160000000, NOMINAL, 266670000,
-				  HIGH, 320000000),
+				  HIGH, 400000000),
 		CLK_INIT(mdp_clk_src.c),
 	},
 };
@@ -4234,11 +4236,11 @@ static void override_for_8937(int speed_bin)
 	OVERRIDE_FTABLE(csi2, ftbl_gcc_camss_csi0_2_clk, 8937);
 	OVERRIDE_FMAX4(vfe0,
 		LOWER, 160000000, LOW, 308570000, NOMINAL, 400000000,
-		NOM_PLUS, 432000000);
+		NOM_PLUS, 453600000);
 	OVERRIDE_FTABLE(vfe0, ftbl_gcc_camss_vfe0_1_clk, 8937);
 	OVERRIDE_FMAX4(vfe1,
 		LOWER, 160000000, LOW, 308570000, NOMINAL, 400000000,
-		NOM_PLUS, 432000000);
+		NOM_PLUS, 453600000);
 	OVERRIDE_FTABLE(vfe1, ftbl_gcc_camss_vfe0_1_clk, 8937);
 
 	if (speed_bin) {
@@ -4261,7 +4263,7 @@ static void override_for_8937(int speed_bin)
 	OVERRIDE_FTABLE(cpp, ftbl_gcc_camss_cpp_clk, 8937);
 	OVERRIDE_FMAX5(jpeg0,
 		LOWER, 133330000, LOW, 200000000, NOMINAL, 266670000,
-		NOM_PLUS, 308570000, HIGH, 320000000);
+		NOM_PLUS, 308570000, HIGH, 360000000);
 	OVERRIDE_FTABLE(jpeg0, ftbl_gcc_camss_jpeg0_clk, 8937);
 	OVERRIDE_FMAX2(csi0phytimer, LOWER, 100000000, LOW, 200000000);
 	OVERRIDE_FMAX2(csi1phytimer, LOWER, 100000000, LOW, 200000000);
