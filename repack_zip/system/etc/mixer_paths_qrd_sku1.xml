@@ -49,8 +49,8 @@
     <ctl name="Voip Evrc Min Max Rate Config" id="1" value="4" />
     <ctl name="Voip Dtx Mode" value="0" />
     <ctl name="TTY Mode" value="Off" />
-    <ctl name="HPHL Volume" value="2" />
-    <ctl name="HPHR Volume" value="2" />
+    <ctl name="HPHL Volume" value="3" />
+    <ctl name="HPHR Volume" value="3" />
     <ctl name="RX1 Digital Volume" value="84" />
     <ctl name="RX2 Digital Volume" value="84" />
     <ctl name="RX3 Digital Volume" value="84" />
@@ -91,10 +91,8 @@
     <ctl name="RX3 HPF Switch" value="1"/>
     <ctl name="TX1 HPF Switch" value="1"/>
     <ctl name="TX2 HPF Switch" value="1"/>
-    <ctl name="SRS TruMedia" value="1"/>
     <ctl name="MSM ASphere Set Param" value="1"/>
     <ctl name="RX HPH Mode" value="HD2"/>
-    <ctl name="HPH Type" value="0"/>
     <ctl name="COMP0 RX1" value="0" />
     <ctl name="COMP0 RX2" value="0" />
     <ctl name="EC Reference Bit Format" value="S24_LE"/>
@@ -123,8 +121,8 @@
     <ctl name="EAR PA Boost" value="DISABLE"/>
     <ctl name="Speaker Boost" value="DISABLE"/>
     <ctl name="Ext Spk Boost" value="DISABLE"/>
-    <ctl name="Boost Option" value="BOOST_SWITCH" />
-    <ctl name="SpkrMono VISENSE Switch" value="1" />
+    <ctl name="Boost Option" value="BYPASS_ALWAYS" />
+    <ctl name="SpkrMono VISENSE Switch" value="0" />
 
     <ctl name="PRI_MI2S_RX Audio Mixer MultiMedia1" value="0" />
     <ctl name="INTERNAL_BT_SCO_RX Audio Mixer MultiMedia1" value="0" />
@@ -261,33 +259,31 @@
     <ctl name="AUDIO_REF_EC_UL1 MUX" value="None" />
 
     <!-- IIR -->
-    <!-- IIR1 filter cofficients for High Quality Audio Procesing -->
-    <!-- Acoustic preset  -->
-    <ctl name="IIR1 Band1" id="0" value="268435456" />
-    <ctl name="IIR1 Band1" id="1" value="540433120" />
-    <ctl name="IIR1 Band1" id="2" value="264944647" />
-    <ctl name="IIR1 Band1" id="3" value="540433120" />
-    <ctl name="IIR1 Band1" id="4" value="264944647" />
-    <ctl name="IIR1 Band2" id="0" value="266436358" />
-    <ctl name="IIR1 Band2" id="1" value="547986522" />
-    <ctl name="IIR1 Band2" id="2" value="259600589" />
-    <ctl name="IIR1 Band2" id="3" value="547986522" />
-    <ctl name="IIR1 Band2" id="4" value="257601492" />
-    <ctl name="IIR1 Band3" id="0" value="264320679" />
-    <ctl name="IIR1 Band3" id="1" value="559438821" />
-    <ctl name="IIR1 Band3" id="2" value="251085847" />
-    <ctl name="IIR1 Band3" id="3" value="559438821" />
-    <ctl name="IIR1 Band3" id="4" value="246971071" />
-    <ctl name="IIR1 Band4" id="0" value="259639175" />
-    <ctl name="IIR1 Band4" id="1" value="664575684" />
-    <ctl name="IIR1 Band4" id="2" value="183239062" />
-    <ctl name="IIR1 Band4" id="3" value="664575684" />
-    <ctl name="IIR1 Band4" id="4" value="174442781" />
-    <ctl name="IIR1 Band5" id="0" value="280651279" />
-    <ctl name="IIR1 Band5" id="1" value="763359731" />
-    <ctl name="IIR1 Band5" id="2" value="153917918" />
-    <ctl name="IIR1 Band5" id="3" value="784195692" />
-    <ctl name="IIR1 Band5" id="4" value="145297780" />
+    <ctl name="IIR1 Band1" id ="0" value="268435456" />
+    <ctl name="IIR1 Band1" id ="1" value="0" />
+    <ctl name="IIR1 Band1" id ="2" value="0" />
+    <ctl name="IIR1 Band1" id ="3" value="0" />
+    <ctl name="IIR1 Band1" id ="4" value="0" />
+    <ctl name="IIR1 Band2" id ="0" value="268435456" />
+    <ctl name="IIR1 Band2" id ="1" value="0" />
+    <ctl name="IIR1 Band2" id ="2" value="0" />
+    <ctl name="IIR1 Band2" id ="3" value="0" />
+    <ctl name="IIR1 Band2" id ="4" value="0" />
+    <ctl name="IIR1 Band3" id ="0" value="268435456" />
+    <ctl name="IIR1 Band3" id ="1" value="0" />
+    <ctl name="IIR1 Band3" id ="2" value="0" />
+    <ctl name="IIR1 Band3" id ="3" value="0" />
+    <ctl name="IIR1 Band3" id ="4" value="0" />
+    <ctl name="IIR1 Band4" id ="0" value="268435456" />
+    <ctl name="IIR1 Band4" id ="1" value="0" />
+    <ctl name="IIR1 Band4" id ="2" value="0" />
+    <ctl name="IIR1 Band4" id ="3" value="0" />
+    <ctl name="IIR1 Band4" id ="4" value="0" />
+    <ctl name="IIR1 Band5" id ="0" value="268435456" />
+    <ctl name="IIR1 Band5" id ="1" value="0" />
+    <ctl name="IIR1 Band5" id ="2" value="0" />
+    <ctl name="IIR1 Band5" id ="3" value="0" />
+    <ctl name="IIR1 Band5" id ="4" value="0" />
     <ctl name="IIR1 Enable Band1" value="0" />
     <ctl name="IIR1 Enable Band2" value="0" />
     <ctl name="IIR1 Enable Band3" value="0" />
@@ -513,8 +509,8 @@
 
     <path name="voice-call">
 	<ctl name="MSM ASphere Set Param" value="1"/>
-	<ctl name="DEC1 Volume" value="94" />
- 	<ctl name="DEC2 Volume" value="94" />
+	<ctl name="DEC1 Volume" value="92" />
+ 	<ctl name="DEC2 Volume" value="92" />
         <ctl name="PRI_MI2S_RX_Voice Mixer CSVoice" value="1" />
         <ctl name="Voice_Tx Mixer TERT_MI2S_TX_Voice" value="1" />
     </path>
@@ -873,38 +869,35 @@
     <!-- These are actual sound device specific mixer settings -->
     <path name="adc1">
 <!-- +bug 196716,zhangjianming.wt,ADD,20160111,other can not reciving sound  -->
-        <ctl name="ADC1 Volume" value="6" />
+        <ctl name="ADC1 Volume" value="7" />
         <ctl name="DEC1 MUX" value="ADC1" />
 <!-- -bug 196716,zhangjianming.wt,ADD,20160111,other can not reciving sound  -->
     </path>
 
     <path name="adc2">
 <!-- +bug 196716,zhangjianming.wt,ADD,20160111,other can not reciving sound  -->
-        <ctl name="ADC2 Volume" value="6" />
+        <ctl name="ADC2 Volume" value="7" />
 <!-- -bug 196716,zhangjianming.wt,ADD,20160111,other can not reciving sound  -->
         <ctl name="DEC1 MUX" value="ADC2" />
         <ctl name="MICBIAS CAPLESS Switch" value="1" />
     </path>
     <path name="adc3">
-        <ctl name="ADC3 Volume" value="6" />
+        <ctl name="ADC3 Volume" value="7" />
         <ctl name="DEC1 MUX" value="ADC2" />
         <ctl name="ADC2 MUX" value="INP3" />
     </path>
 	
     <path name="speaker">
 	<ctl name="MSM ASphere Set Param" value="1"/>
-    	<ctl name="RX2 HPF cut off" value="MIN_3DB_4Hz" />
+    	<ctl name="RX2 HPF cut off" value="MIN_3DB_75Hz" />
         <ctl name="MI2S_RX Channels" value="One" />
 	<ctl name="RX2 MIX1 INP1" value="RX2" />
 	<ctl name="COMP0 RX1" value="0" />
     	<ctl name="COMP0 RX2" value="1" />
         <ctl name="RDAC2 MUX" value="RX2" />
-	<ctl name="RX2 Digital Volume" value="86" />
-	<ctl name="Speaker Boost" value="ENABLE"/>
-	<ctl name="Ext Spk Boost" value="ENABLE"/>
-        <ctl name="Lineout_1 amp" value="ENABLE"/>
-	<ctl name="EAR PA Boost" value="DISABLE"/>
+	<ctl name="RX2 Digital Volume" value="88" />
 	<ctl name="HPHR" value="Switch" />
+	<ctl name="Lineout_1 amp" value="ENABLE"/>
    </path>
 
     <path name="speaker-highpf">
@@ -916,11 +909,8 @@
     	<ctl name="COMP0 RX2" value="0" />
         <ctl name="RDAC2 MUX" value="RX2" />
 	<ctl name="RX2 Digital Volume" value="92" />
-	<ctl name="Speaker Boost" value="ENABLE"/>
-	<ctl name="Ext Spk Boost" value="ENABLE"/>
-        <ctl name="Lineout_1 amp" value="ENABLE"/>
-	<ctl name="EAR PA Boost" value="DISABLE"/>
 	<ctl name="HPHR" value="Switch" />
+	<ctl name="Lineout_1 amp" value="ENABLE"/>
    </path>
 
     <path name="wsa-speaker">
@@ -944,7 +934,7 @@
     <path name="speaker-protected">
         <ctl name="DEC3 MUX" value="DMIC3" />
         <ctl name="DEC4 MUX" value="DMIC4" />
-        <path name="wsa-speaker" />
+        <path name="speaker-highpf" />
         <ctl name="PRI_MI2S_RX_VI_FB_MUX" value="SENARY_TX" />
         <ctl name="SpkrMono VISENSE Switch" value="1" />
    </path>
@@ -962,16 +952,16 @@
 	<ctl name="COMP0 RX1" value="1" />
     	<ctl name="COMP0 RX2" value="0" />
         <ctl name="RDAC2 MUX" value="RX1" />
-	<ctl name="RX1 Digital Volume" value="84" />
-	<ctl name="EAR PA Boost" value="ENABLE"/>
+	<ctl name="RX1 Digital Volume" value="86" />
 	<ctl name="EAR PA Gain" value="POS_6_DB" />
         <ctl name="EAR_S" value="Switch" />
+	<ctl name="Lineout_1 amp" value="DISABLE"/>
     </path>
 
     <path name="handset-mic">
         <path name="adc1" />
-	<ctl name="TX1 HPF cut off" value="MIN_3DB_75Hz"/>
-    	<ctl name="TX2 HPF cut off" value="MIN_3DB_75Hz"/>
+	<ctl name="TX1 HPF cut off" value="MIN_3DB_150Hz"/>
+    	<ctl name="TX2 HPF cut off" value="MIN_3DB_150Hz"/>
 	<ctl name="MSM ASphere Set Param" value="0"/>
 	<ctl name="DEC1 Volume" value="94" />
 	<ctl name="DEC2 Volume" value="94" />
@@ -984,8 +974,8 @@
 	<ctl name="TX1 HPF cut off" value="MIN_3DB_4Hz"/>
     	<ctl name="TX2 HPF cut off" value="MIN_3DB_4Hz"/>
 	<ctl name="MSM ASphere Set Param" value="1"/>
-	<ctl name="DEC1 Volume" value="88" />
-	<ctl name="DEC2 Volume" value="88" />
+	<ctl name="DEC1 Volume" value="87" />
+	<ctl name="DEC2 Volume" value="87" />
         <ctl name="IIR1 INP1 MUX" value="DEC1" />
     </path>
 
@@ -997,16 +987,15 @@
     	<ctl name="RX2 HPF cut off" value="MIN_3DB_4Hz"/>
         <ctl name="RX1 MIX1 INP1" value="RX1" />
         <ctl name="RX2 MIX1 INP1" value="RX2" />
-	<ctl name="HPH Type" value="1"/>
 	<ctl name="RX HPH Mode" value="HD2"/>
     	<ctl name="COMP0 RX1" value="1" />
     	<ctl name="COMP0 RX2" value="1" />
         <ctl name="RDAC2 MUX" value="RX2" />
-	<ctl name="RX1 Digital Volume" value="86" />
-        <ctl name="RX2 Digital Volume" value="86" />
+	<ctl name="RX1 Digital Volume" value="88" />
+        <ctl name="RX2 Digital Volume" value="88" />
         <ctl name="HPHL" value="Switch" />
         <ctl name="HPHR" value="Switch" />
-	<ctl name="EAR PA Boost" value="DISABLE"/>
+	<ctl name="Lineout_1 amp" value="DISABLE"/>
         <ctl name="headset amp" value="ENABLE"/>
     </path>
 
@@ -1016,7 +1005,7 @@
 	<ctl name="TX1 HPF cut off" value="MIN_3DB_150Hz"/>
     	<ctl name="TX2 HPF cut off" value="MIN_3DB_150Hz"/>
 	<ctl name="ADC2 Volume" value="8" />
-	<ctl name="DEC1 Volume" value="92" />
+	<ctl name="DEC1 Volume" value="93" />
 	<ctl name="DEC2 Volume" value="0" />
         <ctl name="ADC2 MUX" value="INP2" />
         <ctl name="IIR1 INP1 MUX" value="DEC1" />
@@ -1122,7 +1111,7 @@
     <path name="speaker-dmic-endfire">
         <path name="adc1" />
 <!-- +bug 196716,zhangjianming.wt,ADD,20160111,other can not reciving sound  -->
-        <ctl name="ADC3 Volume" value="6" />
+        <ctl name="ADC3 Volume" value="7" />
 <!-- -bug 196716,zhangjianming.wt,ADD,20160111,other can not reciving sound  -->
         <ctl name="DEC2 MUX" value="ADC2" />
         <ctl name="MI2S_TX Channels" value="Two" />
@@ -1146,8 +1135,8 @@
 	<ctl name="DEC1 MUX" value="ADC2"/>
 	<ctl name="MI2S_TX Channels" value="Two" />
 	<ctl name="ADC2 MUX" value="INP3" />
-	<ctl name="ADC1 Volume" value="6" />
-	<ctl name="ADC3 Volume" value="6" />
+	<ctl name="ADC1 Volume" value="7" />
+	<ctl name="ADC3 Volume" value="7" />
     </path>
 
     <path name="voice-speaker-dmic-ef">
@@ -1163,8 +1152,8 @@
     </path>
 
     <path name="handset-stereo-dmic-ef">
-        <ctl name="DEC1 Volume" value="84" />
-        <ctl name="DEC2 Volume" value="84" />
+        <ctl name="DEC1 Volume" value="86" />
+        <ctl name="DEC2 Volume" value="86" />
         <path name="speaker-dmic-endfire" />
     </path>
 
@@ -1174,7 +1163,7 @@
 
     <path name="speaker-dmic-broadside">
         <path name="adc1" />
-        <ctl name="ADC3 Volume" value="6" />
+        <ctl name="ADC3 Volume" value="7" />
         <ctl name="DEC2 MUX" value="ADC2" />
         <ctl name="ADC2 MUX" value="INP3" />
         <ctl name="MI2S_TX Channels" value="Two" />
