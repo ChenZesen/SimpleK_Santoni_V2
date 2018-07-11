@@ -62,7 +62,7 @@ static struct mux_div_clk a53ssmux_bc = {
 	.ops = &rcg_mux_div_ops,
 	.safe_freq = 400000000,
 	.data = {
-		.max_div = 32,
+		.max_div = 38,
 		.min_div = 2,
 		.is_half_divider = true,
 	},
@@ -82,7 +82,7 @@ static struct mux_div_clk a53ssmux_lc = {
 	.ops = &rcg_mux_div_ops,
 	.safe_freq = 200000000,
 	.data = {
-		.max_div = 32,
+		.max_div = 38,
 		.min_div = 2,
 		.is_half_divider = true,
 	},
@@ -102,12 +102,13 @@ static struct mux_div_clk a53ssmux_cci = {
 	.ops = &rcg_mux_div_ops,
 	.safe_freq = 200000000,
 	.data = {
-		.max_div = 32,
+		.max_div = 38,
 		.min_div = 2,
 		.is_half_divider = true,
 	},
 	.c = {
 		.dbg_name = "a53ssmux_cci",
+		.flags = CLKFLAG_NO_RATE_CACHE,
 		.ops = &clk_ops_mux_div_clk,
 		CLK_INIT(a53ssmux_cci.c),
 	},
